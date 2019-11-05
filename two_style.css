@@ -1,3 +1,10 @@
 h1 {
     color: black;
+    font-size: 45px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
 }
