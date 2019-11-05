@@ -1,0 +1,47 @@
+{%  extends "base.html" %}
+
+{% block content %}
+<body>
+    <h1>Welcome {{ name }}, here are top destinations!</h1>
+    <p><a href="https://www.google.com/"> goooogle</a></p>
+
+    {%  for i in topcty %}
+        <li> {{ i }}</li>
+    {%  endfor %}
+
+{#    <form>#}
+{#        <br>#}
+{#      City Name#}
+{#      <input type="text" name="cityname">#}
+{#      <br>#}
+{#        <br>#}
+{#      City Rank#}
+{#      <input type="text" name="cityrank">#}
+{#        <br>#}
+{#        <br>#}
+{#        Submit<input type = "submit" value = "submit">#}
+{#    </form>#}
+{#    <p>This is the comment.</p>#}
+
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p> {{ form.city_name.label }}<br>
+            {{ form.city_name(size=32) }}
+        </p>
+        <p> {{ form.city_rank.label }}<br>
+            {{ form.city_rank(size=32) }}
+        </p>
+        <p>
+            {{ form.is_visited.label }}
+            {{ form.is_visited() }}
+        </p>
+        <p>
+            {{ form.comments.label }}
+            {{ form.comments() }}
+        </p>
+        <p>{{ form.submit() }}
+        </p>
+    </form>
+
+</body>
+{% endblock %}
