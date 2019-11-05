@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import render_template, flash, redirect, url_for
 from app import app
 from app import db
@@ -66,19 +65,3 @@ def register():
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
-=======
-from flask import render_template
-from app import myApp
-from app.forms import Login
-
-@myApp.route('/')
-def front():
-	return render_template('index.html')
-
-@myApp.route('/login')
-def login():
-	form = Login()
-	if form.validate_on_submit():
-		pass
-	return render_template('login.html', form=form)
->>>>>>> master
