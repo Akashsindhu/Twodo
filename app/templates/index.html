@@ -7,10 +7,12 @@
         <input type="text" name="task">
         <input type="submit" value="Add task">
     </form>
-    {% for task in todo %}
-   	 <div>
-   	 	<p>{{ task.owner.username }}'s task: <b>{{ task.task }}</b></p>
-   	 </div>
-    {% endfor %}
+    <div>
+    	<ol>
+    		{% for task in todo %}
+   	 			<li>{{ task.task }}</li>
+   			{% endfor %}
+    	</ol>
+    </div>
     <div><a href="{{ url_for('logout') }}">Logout</a></div>
 {% endblock %}:
