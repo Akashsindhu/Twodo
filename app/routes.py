@@ -10,6 +10,7 @@ from flask_login import login_required
 from flask import request
 from werkzeug.urls import url_parse
 
+@app.route('/')
 @app.route('/index')
 @login_required
 def index():
