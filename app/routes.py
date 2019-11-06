@@ -3,28 +3,20 @@ from app import app
 from app import db
 from app.forms import LoginForm
 from app.forms import RegistrationForm
-from app.models import User
+from app.models import User, Todo
 from flask_login import current_user, login_user
 from flask_login import logout_user
 from flask_login import login_required
 from flask import request
 from werkzeug.urls import url_parse
 
-@app.route('/')
 @app.route('/index')
 @login_required
 def index():
-    posts = [
-        {
-            'author': {},
-            'body': 'Hang tight we are developing this website. We will get back to you once done.'
-        },
-        # {
-        #     'author': {'username': 'Susan'},
-        #     'body': 'The Avengers movie was so cool!'
-        # }
-    ]
-    return render_template('index.html', title='Home', posts=posts)
+    user = User.query.filter_by(username=current_user.username).first()
+    todo = user.todo.all()
+    return render_template('index.html', title='Home', todo=todo)
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -50,7 +42,7 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('login'))
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -65,3 +57,13 @@ def register():
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
+
+@app.route('/add', methods=['POST'])
+def add():
+    todo = Todo(task=request.form['task'], owner=current_user)
+    db.session.add(todo)
+    db.session.commit()
+
+    return redirect(url_for('index'))
+
+
