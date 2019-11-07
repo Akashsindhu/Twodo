@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- current_user is a property of flask-login -->
+    <h1>Hi, {{ current_user.username }}!</h1>
+    <form action="{{ url_for('add') }}" method="POST">
+        <input type="text" name="task">
+        <input type="submit" value="Add task">
+    </form>
+    <div>
+    	<ol>
+    		{% for task in todo %}
+   	 			<li>{{ task.task }}</li>
+   			{% endfor %}
+    	</ol>
+    </div>
+    <div><a href="{{ url_for('logout') }}">Logout</a></div>
+{% endblock %}:
