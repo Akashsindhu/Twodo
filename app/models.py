@@ -9,7 +9,7 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(128), index=True, unique=True)
     password_hash = db.Column(db.String(128))
-    todo = db.relationship('Todo', backref='owner', lazy='dynamic')
+    todo = db.relationship('Todo', backref='owner', lazy='dynamic') #was post blog from notes
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
