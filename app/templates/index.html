@@ -4,16 +4,15 @@
 <link rel="stylesheet" type="text/css" href="two_style.css">
     <!-- current_user is a property of flask-login -->
     <h1 class="userpage">Hi, {{ current_user.username }}!</h1>
-    <form action="{{ url_for('add') }}" method="POST">
-        <input type="text" name="task">
-        <input type="submit" value="Add task">
-    </form>
+    <a href="{{ url_for('create') }}">Create a new project</a>
     <div>
-    	<ol>
-    		{% for task in todo %}
-   	 			<li>{{ task.task }}</li>
+    	<ul>
+    		{% for project in projects %}
+   	 			<li>
+   	 				<a href="{{ url_for('project', id=project.id) }}">{{ project.name }}</a>
+   	 			</li>
    			{% endfor %}
-    	</ol>
+    	</ul>
     </div>
     <div><a href="{{ url_for('logout') }}">Logout</a></div>
 {% endblock %}:
