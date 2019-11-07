@@ -10,15 +10,16 @@ from flask_login import login_required
 from flask import request
 from werkzeug.urls import url_parse
 
+#when you need to log in
 @app.route('/')
 @app.route('/index')
-@login_required
+@login_required 
 def index():
     user = User.query.filter_by(username=current_user.username).first()
     todo = user.todo.all()
     return render_template('index.html', title='Home', todo=todo)
 
-
+#already logged in, goes to user page
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -59,7 +60,7 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
-@app.route('/add', methods=['POST'])
+@app.route('/add', methods=['POST']) #create tasks
 def add():
     todo = Todo(task=request.form['task'], owner=current_user)
     db.session.add(todo)
