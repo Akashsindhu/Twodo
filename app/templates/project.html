@@ -3,17 +3,35 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="two_style.css">
     <!-- current_user is a property of flask-login -->
-    <h1 class="userpage">{{ project.name }}!</h1>
+    <h1 class="userpage">{{ project.name }}</h1>
     <form action="{{ url_for('addTask', id=project.id) }}" method="POST">
         <input type="text" name="task">
         <input type="submit" value="Add task">
     </form>
     <div>
+        <h3>Incomplete Tasks:</h3>
     	<ol>
-    		{% for task in tasks %}
+    		{% for task in incomplete %}
    	 			<li>{{ task.task }}</li>
+                <form action="{{ url_for('deleteTask', project_id=project.id, task_id=task.id) }}" method="POST">
+                    <input type="submit" value="Delete">
+                </form>
+                <form action="{{ url_for('complete', project_id=project.id, task_id=task.id) }}" method="POST">
+                    <input type="submit" value="Mark as complete">
+                </form>
    			{% endfor %}
     	</ol>
+    </div>
+    <div>
+        <h3>Complete Tasks:</h3>
+        <ol>
+            {% for task in complete %}
+                <li>{{ task.task }}</li>
+                <form action="{{ url_for('deleteTask', project_id=project.id, task_id=task.id) }}" method="POST">
+                    <input type="submit" value="Delete">
+                </form>
+            {% endfor %}
+        </ol>
     </div>
     <div><a href="{{ url_for('index') }}">Go back</a></div>
 {% endblock %}:

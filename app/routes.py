@@ -17,7 +17,6 @@ from werkzeug.urls import url_parse
 def index():
     user = User.query.filter_by(username=current_user.username).first()
     projects = user.projects.all()
-    #todo = user.todo.all()
     return render_template('index.html', title='Home', projects=projects)
 
 #login page.
@@ -61,11 +60,12 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
-@app.route('/project/<id>')
+@app.route('/project/int:<id>')
 def project(id):
-    current_project = current_user.projects.filter_by(id=int(id)).first()
-    todo = current_project.todos.all()
-    return render_template('project.html', project=current_project, tasks=todo)
+    current_project = current_user.projects.filter_by(id=id).first()
+    incomplete = current_project.todos.filter_by(complete=False).all()
+    complete = current_project.todos.filter_by(complete=True).all()
+    return render_template('project.html', project=current_project, complete=complete, incomplete=incomplete)
     #return '<h1>{}</h1>'.format(current_project.name)
 
 #routes to a new page that grabs input from the user
@@ -82,14 +82,31 @@ def addProject():
     db.session.commit()
     return redirect(url_for('index'))
 
-#clicking the add task button will route you here. A task is created and added to the database here.
-@app.route('/addTask/<id>', methods=['POST']) #create tasks
+#clicking the add task button will route you here. A task is created and added to the database here
+@app.route('/addTask/int:<id>', methods=['POST']) #create tasks
 def addTask(id):
-    current_project = current_user.projects.filter_by(id=int(id)).first()
+    current_project = current_user.projects.filter_by(id=id).first()
     todo = Todo(task=request.form['task'], project=current_project)
     db.session.add(todo)
     db.session.commit()
 
     return redirect(url_for('project', id=id))
 
+#deletes a task from the database. project_id and task id must be passed into this function
+@app.route('/deleteTask/int:<project_id>/int:<task_id>', methods=['POST']) #delete tasks
+def deleteTask(project_id, task_id):
+    current_project = current_user.projects.filter_by(id=project_id).first()
+    task = current_project.todos.filter_by(id=task_id).first()
+    db.session.delete(task)
+    db.session.commit()
+    #return '<h1>{}</h1>'.format(task.task)
+    return redirect(url_for('project', id=current_project.id))
 
+@app.route('/complete/int:<project_id>/int:<task_id>', methods=['POST'])
+def complete(project_id, task_id):
+    current_project = current_user.projects.filter_by(id=project_id).first()
+    task = current_project.todos.filter_by(id=task_id).first()
+    task.complete = True
+    db.session.commit()
+
+    return redirect(url_for('project', id=current_project.id))
