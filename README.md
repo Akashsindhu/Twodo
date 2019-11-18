@@ -21,14 +21,14 @@ $ flask run
 After running cmds go to http://127.0.0.1:5000/
 
 ### 8 features we are going to implement for milestone 4. 
-1. login - Complete on master
-2. Register - Complete on master
-3. Logout - Complete on master
-4. Create a project - Complete on master
-5. Add tasks - Complete on master
-6. Mark task as complete or pending - pending
-7. Delete task - pending
-8. Set deadline - pending
+1. login - Complete
+2. Register - Complete
+3. Logout - Complete
+4. Create a project - Complete
+5. Add tasks - Complete
+6. Mark task as complete or pending - complete
+7. Delete task - complete
+8. style the login page - kind of complete
 
 
 ### test cases using travis-ci
