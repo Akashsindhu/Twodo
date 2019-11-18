@@ -29,8 +29,3 @@ After running cmds go to http://127.0.0.1:5000/
 6. Mark task as complete or pending - complete
 7. Delete task - complete
 8. style the login page - kind of complete
-
-
-### test cases using travis-ci
-pending 
-file location of test cases and how to run them. 
