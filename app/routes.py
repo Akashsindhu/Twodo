@@ -76,8 +76,9 @@ def project(id):
     # separate incomplete and complete projects using the 'complete' attribute that is unique to each todo item
     incomplete = current_project.todos.filter_by(complete=False).all()
     complete = current_project.todos.filter_by(complete=True).all()
+    contributors = current_project.contributors.all()
     # pass in the incomplete and complete items into the render function
-    return render_template('project.html', project=current_project, complete=complete, incomplete=incomplete)
+    return render_template('project.html', project=current_project, complete=complete, incomplete=incomplete, contributors=contributors)
     # return '<h1>{}</h1>'.format(current_project.name)
 
 
@@ -142,3 +143,14 @@ def deleteProject(project_id):
     db.session.commit()
 
     return redirect(url_for('index', id=current_project.id))
+
+@app.route('/addContributor/int:<project_id>', methods=['POST'])  # create tasks
+def addContributor(project_id):
+    # create a new Project using the name inputted in create.html
+    user = User.query.filter_by(username=request.form['contributor']).first()
+    current_project = current_user.projects.filter_by(id=project_id).first()
+    # add to database
+    current_project.contributors.append(user)
+    # update list of contributors for the Project
+    db.session.commit()
+    return redirect(url_for('project', id=current_project.id))
