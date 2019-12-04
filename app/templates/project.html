@@ -1,11 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="two_style.css">
+<link rel="stylesheet" type="text/css" href="/static/two_style.css">
     <!-- current_user is a property of flask-login -->
 <body>
-    <h1 class="userpage">{{ project.name }}</h1>
-
+    <h1>{{ project.name }}</h1>
+    <ul>
+        {% for contributor in contributors %}
+            <li>{{ contributor.username }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('addContributor', project_id=project.id) }}" method="POST">
+        <input type="text" name="contributor">
+        <input type="submit" value="Add Contributor">
+    </form>
     <form action="{{ url_for('addTask', id=project.id) }}" method="POST">
         <input type="text" name="task">
         <input type="submit" value="Add task">

@@ -14,7 +14,7 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(128), index=True, unique=True)
     password_hash = db.Column(db.String(128))
-    projects = db.relationship('Project', secondary=assocations, backref='contributors', lazy='dynamic')
+    projects = db.relationship('Project', secondary=assocations, backref=db.backref('contributors',lazy='dynamic'), lazy='dynamic')
     #todo = db.relationship('Todo', backref='owner', lazy='dynamic') #was post blog from notes
 
     def set_password(self, password):
@@ -41,9 +41,6 @@ class Todo(db.Model):
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     #user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     project_id = db.Column(db.Integer, db.ForeignKey('project.id'))
-
-    def __repr__(self):
-        return '<Posts {}>'.format(self.task)
 
 #Todo.__table__.drop(db.engine)
 db.create_all()
