@@ -3,7 +3,9 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="two_style.css">
     <!-- current_user is a property of flask-login -->
+<body>
     <h1 class="userpage">{{ project.name }}</h1>
+
     <form action="{{ url_for('addTask', id=project.id) }}" method="POST">
         <input type="text" name="task">
         <input type="submit" value="Add task">
@@ -33,5 +35,12 @@
             {% endfor %}
         </ol>
     </div>
+    <div>
+        <form action="{{ url_for('deleteProject', project_id=project.id) }}" method="POST">
+            <input type="submit" value="Delete Project">
+        </form>
+    </div>
     <div><a href="{{ url_for('index') }}">Go back</a></div>
+</body>
+
 {% endblock %}:

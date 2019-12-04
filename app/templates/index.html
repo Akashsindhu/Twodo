@@ -1,18 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+
+<body style="background:#800000 url('/static/images/backgroundhome.jpg');
+	background-repeat: no-repeat;
+    background-size: cover;
+">
 <link rel="stylesheet" type="text/css" href="two_style.css">
     <!-- current_user is a property of flask-login -->
-    <h1 class="userpage">Hi, {{ current_user.username }}!</h1>
-    <a href="{{ url_for('create') }}">Create a new project</a>
+    <h1 style="color:white; text-align: center;" class="userpage">Hi, {{ current_user.username }}!</h1>
+
+	<a style="color:white; text-align: center; font-size: 30px;" href="{{ url_for('create') }}">Create a new project</a>
     <div>
     	<ul>
     		{% for project in projects %}
    	 			<li>
-   	 				<a href="{{ url_for('project', id=project.id) }}">{{ project.name }}</a>
+   	 				<a style="color:white; font-size: 30px;"href="{{ url_for('project', id=project.id) }}">{{ project.name }}</a>
    	 			</li>
    			{% endfor %}
     	</ul>
     </div>
-    <div><a href="{{ url_for('logout') }}">Logout</a></div>
+    <div><a style="color:white; text-align: right; font-size: 30px;" href="{{ url_for('logout') }}">Logout</a></div>
+</body>
 {% endblock %}:

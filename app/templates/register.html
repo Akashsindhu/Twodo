@@ -1,37 +1,55 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 class="register">Register</h1>
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+<link rel="stylesheet" href="two_styles.css">
+
+<body style="background:#800000 url('/static/images/backgroundfour.jpg');
+	background-repeat: no-repeat;
+    background-size: cover;
+">
+    <h1 style="color:white; text-align: center;" class="register">Register</h1>
+    <br>
+    <br>
     <form action="" method="post">
         {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}<br>
-            {% for error in form.username.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.email.label }}<br>
-            {{ form.email(size=64) }}<br>
-            {% for error in form.email.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}<br>
-            {% for error in form.password.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.password2.label }}<br>
-            {{ form.password2(size=32) }}<br>
-            {% for error in form.password2.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
+        <h1 style="color:white; text-align: center;">
+            <p>
+                {{ form.username.label }}<br><br>
+                {{ form.username(size=32) }}<br>
+                {% for error in form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+        </h1>
+        <h1 style="color:white; text-align: center;">
+            <p>
+                {{ form.email.label }}<br><br>
+                {{ form.email(size=64) }}<br>
+                {% for error in form.email.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+        </h1>
+        <h1 style="color:white; text-align: center;">
+            <p>
+                {{ form.password.label }}<br><br>
+                {{ form.password(size=32) }}<br>
+                {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+        </h1>
+        <h1 style="color:white; text-align: center;">
+            <p>
+                {{ form.password2.label }}<br><br>
+                {{ form.password2(size=32) }}<br>
+                {% for error in form.password2.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+        </h1>
         <p>{{ form.submit() }}</p>
     </form>
+</body>
 {% endblock %}
