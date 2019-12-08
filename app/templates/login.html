@@ -1,19 +1,116 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Sign In</h1>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+	<link rel="stylesheet" type="text/css" href="app/static/two_style.css">
+</head>
+<br>
+<br>
+
+<body style="background:#800000 url('/static/images/backgroundfour.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+">
+<br>
+<br>
+<style>
+    .animate-top{
+	position:relative;
+	animation:animatetop 2s
+}
+@keyframes animatetop{
+	from{
+		top:-300px;opacity:0
+	}to{
+		top:0;
+		opacity:1
+	}
+}
+.animate-left{
+	position:relative;
+	animation:animateleft 2s
+}
+@keyframes animateleft{
+	from{
+		left:-300px;
+		opacity:0
+	}to{
+		left:0;
+		opacity:1
+	}
+}
+.animate-right{
+	position:relative;
+	animation:animateright 2s
+}
+@keyframes animateright{
+	from{
+		right:-300px;
+		opacity:0
+	}to{
+		right:0;
+		opacity:1
+	}
+}
+.animate-bottom{
+	position:relative;
+	animation:animatebottom 2s
+}
+@keyframes animatebottom{
+	from{
+		bottom:-300px;
+		opacity:0
+	}to{
+		bottom:0;
+		opacity:1
+	}
+}
+</style>
+
+<h1 class="animate-top"
+        style="color:white; text-align: center;">Sign In</h1>
+
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}
-        </p>
-        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-        <p>{{ form.submit() }}</p>
-         <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+        <h1 class="animate-left"
+                style="color:white; text-align: center;">
+            <p>
+                {{ form.username.label }}
+                <br>
+                <br>
+                {{ form.username(size=32) }}
+            </p>
+        </h1>
+        <h1 class="animate-right"
+                style="color:white; text-align: center;">
+            <p>
+                {{ form.password.label }}
+                <br>
+                <br>
+                {{ form.password(size=32) }}
+            </p>
+        </h1>
+        <h1 class="animate-left"
+                style="color:white; text-align: center;">
+            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        </h1>
+        <div class="animate-bottom">
+            <p>
+                <button class="share">Sign In
+                    <p id = sign></p>
+                </button>
+            </p>
+            <p>
+                <input type="button" class="share" onclick="location.href='{{ url_for('register') }}';" value="Register" />
+            </p>
+        </div>
     </form>
+<script>
+    document.getElementById("sign").onclick = function() {form.submit()};
+</script>
+</body>
+</html>
 {% endblock %}

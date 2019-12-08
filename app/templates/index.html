@@ -1,11 +1,120 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <!-- current_user is a property of flask-login -->
-    <h1>Hi, {{ current_user.username }}!</h1>
-    {% for post in posts %}
-{#    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>#}
-        <div><p><b>{{ post.body }}</b></p></div>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+	<link rel="stylesheet" type="text/css" href="app/static/two_style.css">
+</head>
+<style>
+	.flex-container {
+	  display: flex;
+	  text-align: center;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	}
 
-    {% endfor %}
+	.flex-container > div {
+	<!--  background-color: #f1f1f1;-->
+	  width: 100px;
+	  margin: 10px;
+	  text-align: center;
+	  line-height: 40px;
+	  font-size: 30px;
+	}
+.animate-top{
+	position:relative;
+	animation:animatetop 2s
+}
+@keyframes animatetop{
+	from{
+		top:-300px;opacity:0
+	}to{
+		top:0;
+		opacity:1
+	}
+}
+.animate-left{
+	position:relative;
+	animation:animateleft 2s
+}
+@keyframes animateleft{
+	from{
+		left:-300px;
+		opacity:0
+	}to{
+		left:0;
+		opacity:1
+	}
+}
+.animate-right{
+	position:relative;
+	animation:animateright 2s
+}
+@keyframes animateright{
+	from{
+		right:-300px;
+		opacity:0
+	}to{
+		right:0;
+		opacity:1
+	}
+}
+.animate-bottom{
+	position:relative;
+	animation:animatebottom 2s
+}
+@keyframes animatebottom{
+	from{
+		bottom:-300px;
+		opacity:0
+	}to{
+		bottom:0;
+		opacity:1
+	}
+}
+</style>
+
+
+<body style="background:#800000 url('/static/images/backgroundhome.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+">
+    <!-- current_user is a property of flask-login -->
+    <h1 class="animate-top"
+			style="
+    	color:white;
+    	text-align: center;"
+		class="userpage">Hi, {{ current_user.username }}!</h1>
+	<div class="animate-left">
+		<p>
+			<input style= "width: 15%;" type="button" class="share" onclick="location.href='{{ url_for('create') }}';" value="Create a new project" />
+		</p>
+	</div>
+
+	<h1 class="animate-bottom"
+			style="color:black; text-align: center;">Project List:</h1>
+
+		<!--    <div style="text-align: left;">-->
+		<!--    	<ul>-->
+		<!--    		{% for project in projects %}-->
+		<!--   	 			<li>-->
+		<div class="flex-container animate-bottom">
+		  <div><a style="color:black;" href="{{ url_for('project', id=project.id) }}">{{ project.name }}</a></div>
+		</div>
+
+		<!--   	 			</li>-->
+		<!--   			{% endfor %}-->
+		<!--    	</ul>-->
+		<!--    </div>-->
+		<!--    <div><a style="color:white; text-align: right; font-size: 30px;" href="{{ url_for('logout') }}">Logout</a></div>-->
+	<div class="animate-right">
+		<p>
+            <input style= "width: 15%;" type="button" class="share" onclick="location.href='{{ url_for('logout') }}';" value="Logout" />
+        </p>
+	</div>
+</body>
+</html>
 {% endblock %}:
