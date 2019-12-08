@@ -27,6 +27,8 @@
     </expand>
     <select />
   </component>
+<<<<<<< HEAD
+=======
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -34,6 +36,7 @@
       </list>
     </option>
   </component>
+>>>>>>> akash_branch
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -70,6 +73,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+<<<<<<< HEAD
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/static/images" />
+      <recent name="$PROJECT_DIR$/app" />
+=======
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/templates" />
       <recent name="$PROJECT_DIR$/app" />
@@ -78,6 +89,7 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/static/images" />
       <recent name="$PROJECT_DIR$/app/templates" />
+>>>>>>> akash_branch
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,7 +165,11 @@
       <workItem from="1570657311590" duration="850000" />
       <workItem from="1572915470752" duration="240000" />
       <workItem from="1572916653807" duration="1203000" />
+<<<<<<< HEAD
+      <workItem from="1575427020072" duration="736000" />
+=======
       <workItem from="1575596319869" duration="2641000" />
+>>>>>>> akash_branch
     </task>
     <servers />
   </component>
@@ -178,6 +194,40 @@
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="147" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1366.745@0.23.1366.745" timestamp="1575362399206" />
+<<<<<<< HEAD
+    <state width="1345" height="187" key="GridCell.Tab.0.bottom" timestamp="1575426793448">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1345" height="187" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1575426793448" />
+    <state width="1345" height="187" key="GridCell.Tab.0.center" timestamp="1575426793446">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1345" height="187" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1575426793446" />
+    <state width="1345" height="187" key="GridCell.Tab.0.left" timestamp="1575426793446">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1345" height="187" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1575426793446" />
+    <state width="1345" height="187" key="GridCell.Tab.0.right" timestamp="1575426793447">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1345" height="187" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1575426793447" />
+    <state width="1345" height="232" key="GridCell.Tab.1.bottom" timestamp="1575425266899">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1345" height="232" key="GridCell.Tab.1.bottom/0.23.1366.745@0.23.1366.745" timestamp="1575425266899" />
+    <state width="1345" height="232" key="GridCell.Tab.1.center" timestamp="1575425266898">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1345" height="232" key="GridCell.Tab.1.center/0.23.1366.745@0.23.1366.745" timestamp="1575425266898" />
+    <state width="1345" height="232" key="GridCell.Tab.1.left" timestamp="1575425266897">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1345" height="232" key="GridCell.Tab.1.left/0.23.1366.745@0.23.1366.745" timestamp="1575425266897" />
+    <state width="1345" height="232" key="GridCell.Tab.1.right" timestamp="1575425266899">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state width="1345" height="232" key="GridCell.Tab.1.right/0.23.1366.745@0.23.1366.745" timestamp="1575425266899" />
+=======
     <state width="1345" height="232" key="GridCell.Tab.0.bottom" timestamp="1575557494145">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
@@ -210,10 +260,16 @@
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state width="1345" height="232" key="GridCell.Tab.1.right/0.23.1366.745@0.23.1366.745" timestamp="1575557494147" />
+>>>>>>> akash_branch
     <state x="192" y="34" key="SettingsEditor" timestamp="1575362323898">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="192" y="34" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1575362323898" />
+<<<<<<< HEAD
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Twodo$run.coverage" NAME="run Coverage Results" MODIFIED="1575427143106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
     <state x="376" y="228" key="com.intellij.ide.util.TipDialog" timestamp="1575547249654">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
@@ -225,5 +281,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Twodo$run.coverage" NAME="run Coverage Results" MODIFIED="1575765144415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> akash_branch
   </component>
 </project>

@@ -159,11 +159,11 @@ from flask_login import login_required
 from flask import request
 from werkzeug.urls import url_parse
 
-
 # home page. Shows all existing projects in the database
 @app.route('/')
 @app.route('/index')
 @login_required
+
 def index():
     # grab the current user by filtering through all the users
     user = User.query.filter_by(username=current_user.username).first()
@@ -286,6 +286,16 @@ def complete(project_id, task_id):
     return redirect(url_for('project', id=current_project.id))
 
 
+
+@app.route('/deleteProject/int:<project_id>', methods=['POST'])  # delete project
+def deleteProject(project_id):
+    current_project = current_user.projects.filter_by(id=project_id).first()
+    db.session.delete(current_project)
+    db.session.commit()
+
+    return redirect(url_for('index', id=current_project.id))
+
+
 @app.route('/addContributor/int:<project_id>', methods=['POST'])  # create tasks
 def addContributor(project_id):
     # create a new Project using the name inputted in create.html
@@ -366,5 +376,4 @@ def upload():
 @app.route('/upload/<filename>')
 def send_image(filename):
     return send_from_directory("images", filename)
-
 
