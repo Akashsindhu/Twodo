@@ -2,21 +2,6 @@
 
 This is a to-do web application just like google keep. 
 
-<<<<<<< HEAD
-### 8 features we are going to implement for milestone. 
-1. login - Complete
-2. Register - Complete
-3. Logout - Complete
-4. Create a project - Complete
-5. Add tasks - Complete
-6. Mark task as complete or pending - complete
-7. Delete task - complete
-8. style the login page - complete
-9. Delete a project - not complete
-10. Add collaborators - complete
-11. Delete collaborators - complete
-
-=======
 ### List of features
 
 1.  Log in, sign-up, password recovery if forgotten. 
@@ -27,7 +12,6 @@ This is a to-do web application just like google keep.
 6.  On reminder, the user should get an email in his inbox.  
 7.  Should be able to add the collaborators in the task. 
 8.  Collaborators should be able to access the website (only after they are registered) and read and edit the shared task.
->>>>>>> akash_branch
 
 
 ### Instructions for running the app
@@ -35,8 +19,6 @@ $ export FLASK_APP=routes.py
 $ flask run
 
 After running cmds go to http://127.0.0.1:5000/
-<<<<<<< HEAD
-=======
 
 ### 8 features we are going to implement for milestone 4. 
 1. login - Complete
@@ -47,4 +29,3 @@ After running cmds go to http://127.0.0.1:5000/
 6. Mark task as complete or pending - complete
 7. Delete task - complete
 8. style the login page - kind of complete
->>>>>>> akash_branch

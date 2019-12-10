@@ -10,5 +10,11 @@
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="app [2]" uuid="e6b882f7-ff97-480e-afd6-c5de742c4792">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\akash\Downloads\Twodo\app.db</jdbc-url>
+    </data-source>
   </component>
 </project>

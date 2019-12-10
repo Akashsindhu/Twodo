@@ -8,6 +8,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="375" />
+  </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_DATA_SOURCES" value="true" />
@@ -27,8 +30,6 @@
     </expand>
     <select />
   </component>
-<<<<<<< HEAD
-=======
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -36,7 +37,6 @@
       </list>
     </option>
   </component>
->>>>>>> akash_branch
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -67,20 +67,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Twodo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-<<<<<<< HEAD
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/templates" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/static/images" />
-      <recent name="$PROJECT_DIR$/app" />
-=======
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/templates" />
       <recent name="$PROJECT_DIR$/app" />
@@ -89,7 +81,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/static/images" />
       <recent name="$PROJECT_DIR$/app/templates" />
->>>>>>> akash_branch
     </key>
   </component>
   <component name="RunDashboard">
@@ -104,7 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run">
+  <component name="RunManager" selected="Python tests.Unittests in test_basic.py">
     <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="myBlog" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,8 +133,24 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in test_basic.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="myBlog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/app/tests/test_basic.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in test_basic.py" />
         <item itemvalue="Python.run" />
       </list>
     </recent_temporary>
@@ -165,11 +172,7 @@
       <workItem from="1570657311590" duration="850000" />
       <workItem from="1572915470752" duration="240000" />
       <workItem from="1572916653807" duration="1203000" />
-<<<<<<< HEAD
-      <workItem from="1575427020072" duration="736000" />
-=======
-      <workItem from="1575596319869" duration="2641000" />
->>>>>>> akash_branch
+      <workItem from="1575948922220" duration="3498000" />
     </task>
     <servers />
   </component>
@@ -194,40 +197,6 @@
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="147" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1366.745@0.23.1366.745" timestamp="1575362399206" />
-<<<<<<< HEAD
-    <state width="1345" height="187" key="GridCell.Tab.0.bottom" timestamp="1575426793448">
-      <screen x="0" y="23" width="1366" height="745" />
-    </state>
-    <state width="1345" height="187" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1575426793448" />
-    <state width="1345" height="187" key="GridCell.Tab.0.center" timestamp="1575426793446">
-      <screen x="0" y="23" width="1366" height="745" />
-    </state>
-    <state width="1345" height="187" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1575426793446" />
-    <state width="1345" height="187" key="GridCell.Tab.0.left" timestamp="1575426793446">
-      <screen x="0" y="23" width="1366" height="745" />
-    </state>
-    <state width="1345" height="187" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1575426793446" />
-    <state width="1345" height="187" key="GridCell.Tab.0.right" timestamp="1575426793447">
-      <screen x="0" y="23" width="1366" height="745" />
-    </state>
-    <state width="1345" height="187" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1575426793447" />
-    <state width="1345" height="232" key="GridCell.Tab.1.bottom" timestamp="1575425266899">
-      <screen x="0" y="23" width="1366" height="745" />
-    </state>
-    <state width="1345" height="232" key="GridCell.Tab.1.bottom/0.23.1366.745@0.23.1366.745" timestamp="1575425266899" />
-    <state width="1345" height="232" key="GridCell.Tab.1.center" timestamp="1575425266898">
-      <screen x="0" y="23" width="1366" height="745" />
-    </state>
-    <state width="1345" height="232" key="GridCell.Tab.1.center/0.23.1366.745@0.23.1366.745" timestamp="1575425266898" />
-    <state width="1345" height="232" key="GridCell.Tab.1.left" timestamp="1575425266897">
-      <screen x="0" y="23" width="1366" height="745" />
-    </state>
-    <state width="1345" height="232" key="GridCell.Tab.1.left/0.23.1366.745@0.23.1366.745" timestamp="1575425266897" />
-    <state width="1345" height="232" key="GridCell.Tab.1.right" timestamp="1575425266899">
-      <screen x="0" y="23" width="1366" height="745" />
-    </state>
-    <state width="1345" height="232" key="GridCell.Tab.1.right/0.23.1366.745@0.23.1366.745" timestamp="1575425266899" />
-=======
     <state width="1345" height="232" key="GridCell.Tab.0.bottom" timestamp="1575557494145">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
@@ -260,16 +229,10 @@
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state width="1345" height="232" key="GridCell.Tab.1.right/0.23.1366.745@0.23.1366.745" timestamp="1575557494147" />
->>>>>>> akash_branch
     <state x="192" y="34" key="SettingsEditor" timestamp="1575362323898">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="192" y="34" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1575362323898" />
-<<<<<<< HEAD
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Twodo$run.coverage" NAME="run Coverage Results" MODIFIED="1575427143106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-=======
     <state x="376" y="228" key="com.intellij.ide.util.TipDialog" timestamp="1575547249654">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
@@ -280,7 +243,7 @@
     <state x="203" y="92" width="670" height="676" key="search.everywhere.popup/0.23.1366.745@0.23.1366.745" timestamp="1575536094703" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Twodo$run.coverage" NAME="run Coverage Results" MODIFIED="1575765144415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
->>>>>>> akash_branch
+    <SUITE FILE_PATH="coverage/Twodo$run.coverage" NAME="run Coverage Results" MODIFIED="1575950397073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Twodo$Unittests_in_test_basic_py.coverage" NAME="Unittests in test_basic.py Coverage Results" MODIFIED="1575950927984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/tests" />
   </component>
 </project>
