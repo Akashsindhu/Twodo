@@ -12,6 +12,9 @@ This is a to-do web application just like google keep.
 6. Mark task as complete or pending - complete
 7. Delete task - complete
 8. style the login page - complete
+9. Delete a project - not complete
+10. Add collaborators - complete
+11. Delete collaborators - complete
 
 
 
@@ -20,5 +23,3 @@ $ export FLASK_APP=routes.py
 $ flask run
 
 After running cmds go to http://127.0.0.1:5000/
-
-
