@@ -1,1 +1,1 @@
-web: gunicorn app:myFlaskObj
+web: gunicorn app:app

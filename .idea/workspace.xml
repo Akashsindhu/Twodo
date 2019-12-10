@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcf2d34d-8a4d-4eb3-830c-e564dd279810" name="Default Changelist" comment="" />
+    <list default="true" id="bcf2d34d-8a4d-4eb3-830c-e564dd279810" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +100,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_basic.py">
+  <component name="RunManager" selected="Python.run">
     <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="myBlog" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,8 +155,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in test_basic.py" />
         <item itemvalue="Python.run" />
+        <item itemvalue="Python tests.Unittests in test_basic.py" />
       </list>
     </recent_temporary>
   </component>
@@ -173,6 +178,7 @@
       <workItem from="1572915470752" duration="240000" />
       <workItem from="1572916653807" duration="1203000" />
       <workItem from="1575948922220" duration="3498000" />
+      <workItem from="1575962337072" duration="1003000" />
     </task>
     <servers />
   </component>
@@ -243,7 +249,7 @@
     <state x="203" y="92" width="670" height="676" key="search.everywhere.popup/0.23.1366.745@0.23.1366.745" timestamp="1575536094703" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Twodo$run.coverage" NAME="run Coverage Results" MODIFIED="1575950397073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Twodo$run.coverage" NAME="run Coverage Results" MODIFIED="1575962355517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Twodo$Unittests_in_test_basic_py.coverage" NAME="Unittests in test_basic.py Coverage Results" MODIFIED="1575950927984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/tests" />
   </component>
 </project>
