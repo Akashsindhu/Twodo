@@ -2,7 +2,7 @@
 
 This is a to-do web application just like google keep. 
 
-### 8 features we are going to implement for milestone. 
+### Features
 1. login - Complete
 2. Register - Complete
 3. Logout - Complete
